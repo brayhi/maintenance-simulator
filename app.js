@@ -17,9 +17,6 @@ app.use(bodyParser.json());
 
 
 
-// Habilitar la carpeta public
-
-app.use(express.static(path.resolve(__dirname, '../public')));
 
 
 mongoose.connect(process.env.URLDB, { useNewUrlParser: true }, (err, res) => {
@@ -28,6 +25,6 @@ mongoose.connect(process.env.URLDB, { useNewUrlParser: true }, (err, res) => {
 });
 
 // Configuracion global de rutas
-app.use('/', mantRoutes);
+app.use('/mantenimientos', mantRoutes);
 
 app.listen(process.env.PORT, () => console.log('Escuchando el puerto: ', process.env.PORT));
