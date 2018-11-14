@@ -31,8 +31,8 @@ app.post('/', (req, res) => {
         country: body.country,
         turbine: body.turbine,
         duration: {
-            from: body.start,
-            to: body.end
+            from: body.from,
+            to: body.to
         },
         euro: body.euro,
         potency: body.potency,
