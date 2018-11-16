@@ -30,7 +30,7 @@ let mantenimientoSchema = new Schema({
     potency: {
         type: Number
     },
-    tipo: {
+    type: {
         type: String
     },
     description: {
